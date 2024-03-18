@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap" rel="stylesheet">
+
+<title>CHECKOUT</title>
+
+        <body class="body22">
+            <div class="content">
+
+                <!-- <div class="moving_text">
+                    <p class="animated-text">sample moving for future use</p>
+                  </div> -->
+
+            <div class=><button class="btn btn-primary need_help"><a id="yo" href="#link_to_help">Need Help</a></button></div>
+
+            <!-- header -- -->
+            <div class="custom-header">
+                <a href="#" class="header-link">Home</a>
+        
+                <img class="mid_image" src="logo.jpg" alt="Logo">
+        
+                <a href="#" class="header-link">Contact Us</a>
+            </div>
+        
+     
+        
+
+
+             <div class="footer">
+                <p>© 2023 Your Website | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+
+<div class="title_section h1"><h1 style="font-size: 50px;">CHECKOUT</h1></div>
+
+            Already have an account? <a href="../Login/login.htm">Click here to login</a>
+            <div class="discount background-div"><p style="color: white;"><u >DISCOUNT / COUPON CODE</u></p>
+               <p style="color: white;">If you have a discount code or prome code please apply here</p> 
+
+                <input class="input_1" type="h" placeholder="Enter the code">
+                <button class="animated-button">Apply Here</button>
+
+
+            </div>
+
+<div class="billing background-div">
+    <div style="color: white;display: block;font-size: larger;"><u>BILLING DETAILS</u></div>
+    <div class="form-group ">
+        <label for="firstname" class="form-label" style="color: white;margin-left: 20px;"  >First Name</label>
+        <input class=" form-control form-control-sm input_2" placeholder="First Name" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="firstname" class="form-label" style="color: white;margin-left: 20px;"   >Last Name</label>
+        <input class="form-control form-control-sm  input_3" placeholder="Last Name" type="text">
+    </div>
+ 
+             </div>
+             <div class="address container-fluid background-div"><p style="color: white;font-size: larger;"><u>ADDRESS</u></p>
+                <input class="form-control form-control-lg" placeholder="STREET ADDRESS" type="text">
+                <input class="form-control form-control-lg" placeholder="Apartment ,suite(optional)" type="text">
+                <input class="form-control form-control-lg" placeholder="Enter city" type="text">
+                <input class="form-control form-control-lg" placeholder="State/City" type="text">
+                <input class="form-control form-control-lg" placeholder="Postcode/ZIP" type="text">
+                <input class="form-control form-control-lg" placeholder="Country/Region" type="text">
+              
+                  
+ 
+             </div>
+             <div class="misc background-div"><p style="color: white;font-size: larger;"><u>CONTACT</u></p>
+                <input placeholder="Enter phone number" type="number">
+                <input placeholder="Enter Email" type="email">
+             </div>
+             <div class="premium">
+                <input onchange="Congratulations()" id="myCheckbox" type="checkbox">If you are a premium member or not?
+             </div>
+             <script>
+                function Congratulations() {
+
+  const checkbox = document.getElementById("myCheckbox");
+
+ 
+  if (checkbox.checked) {
+
+    alert("Congratulations! You get  added benefits of being a premium member . You may proceed to the Checkout.");
+  }
+}
+
+             </script>
+
+<p style="font-size: 40px;font-family: Lexend exa;">YOUR ORDERS</p>
+            <div class="your_orders">
+                <table>
+                    <tr>
+                        <th colspan="5">Food Item</th>
+                        <th colspan="5">Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Food item name</td>
+                        <td colspan="5">Subtotal(Price)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Shipping</td>
+                        <td colspan="5">Free Shipping</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Online Payment Discount</td>
+                        <td colspan="5">-₹374.95</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Total</td>
+                        <td colspan="5">Total price</td>
+                    </tr>
+                 
+                    
+                </table>
+                
+            </div>
+            <div class="pay_now_container">
+                <a href="../cards/card.html">
+                 <button onclick="showMessage()" class="pay_now" >PAY NOW</button>   
+                </a>
+
+                <script>
+                    function showMessage() {
+      alert("You need to fill in all of the details marked with *.For the trial it is permitted to head to the payment section");
+    }
+                </script>
+            </div>
+
+                        <div id="link_to_help" class="bottom_box">
+                            <!-- <img class="image1" src="" alt=""> -->
+                            <div class="section">
+                                <a href="../help/help.htm"><h2>Help</h2>
+                                <p>Get help with our services.</p></a>
+                                
+                            </div>
+                            <div class="section">
+                                <a href="../contact/contact.htm"><h2>Contact Us</h2>
+                                <p>Reach out to us for assistance.</p></a>
+                                
+                            </div>
+                        </div>
+                
+            
+            </div>
+            
+            
+            
+            
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+           
+        </body>
+    </head>
+</html>

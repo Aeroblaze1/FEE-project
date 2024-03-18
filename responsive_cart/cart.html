@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+  </style>
+  <title>Interactive Cart</title>
+</head>
+<body>
+
+<div id="cart">
+  <h2>Shopping Cart</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: ₹<span id="total">0.00</span></p>
+</div>
+
+<script>
+  const items = [
+    { name: 'Pizza', price: 10.99 },
+    { name: 'Burger', price: 5.99 },
+    { name: 'Salad', price: 7.49 }
+  ];
+
+  const cart = [];
+  const cartItemsElement = document.getElementById('cart-items');
+  const totalElement = document.getElementById('total');
+
+  function renderCart() {
+    cartItemsElement.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+      cartItemsElement.appendChild(listItem);
+      total += item.price;
+    });
+
+    totalElement.textContent = total.toFixed(2);
+  }
+
+  function addToCart(item) {
+    cart.push(item);
+    renderCart();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    items.forEach(item => {
+      const addButton = document.createElement('button');
+      addButton.textContent = `Add ${item.name} to Cart`;
+      addButton.addEventListener('click', () => addToCart(item));
+      document.body.appendChild(addButton);
+    });
+  });
+</script>
+
+</body>
+</html>

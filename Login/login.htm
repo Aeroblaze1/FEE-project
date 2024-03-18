@@ -1,0 +1,61 @@
+<head>
+    
+    <title>Login Page</title>
+    <link rel="stylesheet" href="a.css">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <img class="img" src="wallpaperflare.com_wallpaper (5).jpg" alt="image of some random good food" >
+    <section class="container">
+        <div class="login-container">
+            
+            <div class="form-container">
+                <img src="raw.png" alt="illustration" class="illustration" />
+                <h1 class="opacity" style="font-family: Lexend exa;">LOGIN</h1>
+                <form>
+                    <label for="username" style="font-family: Phudu;">Username:</label>
+                    <input type="text" name="username" id="username" required>
+
+                    <label for="password" style="font-family: Phudu;">Password:</label>
+                    <input type="password" name="password" id="password" required>
+                    <button class="opacity" style="font-family: Lexend exa;" type="button" onclick="checkLogin()">Submit</button>
+                </form>
+                <div class="register-forget opacity">
+                    <a href="../Login/register.html">REGISTER</a>
+                    <a href="../Login/forgot.html">FORGOT PASSWORD</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+    <script>
+         var users = [
+            { username: '2310992293', password: '2310992293' },
+            { username: '2310992294', password: '2310992294' },
+            { username: '2310992295', password: '2310992295' }
+        ];
+
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var validUser = users.find(function(user) {
+                return user.username === username && user.password === password;
+            });
+
+            if (validUser) {
+                window.location.href = "../main";
+            } else {
+
+                alert('Invalid username or password. Please try again with your Roll Nos.');
+            }
+        }
+    </script>
+</body>
