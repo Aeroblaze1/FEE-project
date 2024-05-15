@@ -1,0 +1,157 @@
+.need_help{
+    display: inline-block;
+    padding: 10px 20px; /*top right bottom left*/
+    font-size: 16px;
+    border-radius: 50px; /*top-left top-right bottom-right bottom-left*/
+    /* color: #fff; */
+    transition: 0.5s all;
+    transform: translateY(0);
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom : 20px;
+    left: 20px;
+    border: none;
+    z-index: 1000;
+}
+#yo {
+  text-decoration: none;
+  color: white;
+}
+.need_help:hover {
+
+    /* text-align: center; */
+    cursor: pointer;
+    transition: transform 0.3s;  
+}
+.need_help:hover {
+    transform: translateY(-5px);
+  }
+
+
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 17px;
+    text-align: center;
+    position: fixed;
+    bottom : 0;
+    right: 0;
+    
+    
+  }
+
+  .footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+
+  }
+
+  .footer p {
+    margin: 0; /*if only two values given like 10px 5px then means 10px top and bottom and 5px left and right*/
+  }
+
+.bottom_box {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    /* color: #fff; */
+    z-index: 1;
+    justify-content: space-between; /* Distribute space evenly between children */
+    padding: 20px;
+}
+.section {
+  flex: 1; /* Each section takes equal space */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}
+
+.section:hover {
+  background-color: #ddd; /* Change background color on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+.pay_now_container {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.pay_now {
+    background-color: #e9f80eda;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 1s;
+      font-family: Onest;
+      position: relative;
+      overflow: hidden;
+    
+}
+.pay_now::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 100%;
+    background-color: #2980b9;
+    transition: width 0.3s ease; 
+    z-index: -1;
+  }
+  .pay_now:hover::before {
+    width: 100%;
+  }
+  .pay_now:active {
+    animation: buttonClickAnimation 0.3s ease; 
+  }
+  @keyframes buttonClickAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
